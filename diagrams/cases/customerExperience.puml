@@ -1,5 +1,5 @@
 @startuml customer
-left diagramto right direction
+left to right direction
 actor Customer
 rectangle "System" as system {
   (Login)
