@@ -1,5 +1,5 @@
 @startuml
-leftto right direction
+left to right direction
 skinparam packageStyle rectangle
 actor customer
 actor Database
