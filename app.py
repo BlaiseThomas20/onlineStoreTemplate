@@ -32,7 +32,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Define your product data
+"""Renders The products"""
 products = [
     {
         "id": 1,
@@ -57,7 +57,7 @@ products = [
     }
 ]
 
-# Define your routes
+"""Define your routes"""
 @app.route('/')
 def index():
     return render_template('index.html', products=products)
