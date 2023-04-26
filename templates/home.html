@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 <a href="/" class="btn btn-primary ms-right" id="logout_button">Logout</a>
 <div class="row" id="products_page">
     <div class="col-md-12">
@@ -31,7 +32,7 @@
                 <div class="row">
                     <div class="col-md-12" id="index_buttons">
                         <button type="submit" class="btn btn-primary" id="checkout_button" onclick="clicked()">Order</button>
-                    </div>
+                    </div> 
                 </div>
             </form>
         </div>
@@ -40,13 +41,15 @@
 
 <script type="text/javascript">
     function clicked() {
-       if (confirm('Are you sure you want to complete purchase?')) {
-           yourformelement.submit();
-       } else {
-           return false;
-       }
+      const response = confirm("Do you confirm your order?");
+      if (response){
+        yourformelement.submit();
+      }
+      else {
+        alert("Cancelled.")
+      }
     }
-    
+
     function validateForm() {
         var inputs = document.getElementsByClassName("quantity");
         for (var i = 0; i < inputs.length; i++) {
@@ -56,7 +59,7 @@
         }
         alert("Please select at least one item.");
         return false;
-    }
+        }
 </script>
 
 {% endblock %}
