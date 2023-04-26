@@ -28,48 +28,51 @@ def index_page():
     """
     return render_template('index.html', username=username, products=products, sessions=sessions)
 
-@app.route('/cubanChain')
-def cubanChain():
-    cubanChain = {
-        'name': 'Cuban Chain',
-        'description': 'A stylish chain with tightly interlocking links, made of high-quality materials.',
-        'price': '$12000.00',
-        'image': 'cuban_chain.jpeg'
-    }
-    return render_template('cubanChain.html', cubanChain=cubanChain)
+from flask import Flask, render_template
 
-@app.route('/diamondEarring')
-def home():
-    diamondEarrings = {
-        'name': 'Diamond Stud Earrings',
-        'description': 'Elagant Earrings featuring dazzling diamonds that catch the light beautifully',
-        'price': '$599.99',
-        'image': 'diamond_ring.jpeg'
+app = Flask(__name__)
+
+# Define your product data
+products = [
+    {
+        "id": 1,
+        "item_name": "Diamond Ring",
+        "info": "A beautiful diamond ring, perfect for engagements and weddings.",
+        "price": 5000.00,
+        "image_url": "static/images/diamond_ring.jpeg"
+    },
+    {
+        "id": 2,
+        "item_name": "Diamond Earring",
+        "info": "Stunning diamond earrings that will catch everyone's attention.",
+        "price": 8000.00,
+        "image_url": "static/images/diamond_earring.jpeg"
+    },
+    {
+        "id": 3,
+        "item_name": "Cuban Link Chain",
+        "info": "A stylish chain with tightly interlocking links, made of high-quality materials.",
+        "price": 12000.00,
+        "image_url": "static/images/cuban_chain.jpeg"
     }
-    return render_template('diamondEarring.html', diamondEarrings=diamondEarrings)
+]
+
+# Define your routes
+@app.route('/')
+def index():
+    return render_template('index.html', products=products)
 
 @app.route('/diamondRing')
 def diamondRing():
-    diamondRing = {
-        'name': 'Diamond Ring',
-        'description': 'A luxurious ring with a diamond as the centerpiece.',
-        'price': '$6000.00',
-        'image': 'diamond_ring.jpeg'
-    }
-    return render_template('diamondRing.html', diamondRing=diamondRing)
+    return render_template('diamondRing.html')
 
-@app.route('/FAQ')
-def FAQ():
-    """
-    Renders the login page when the user is at the `/login` endpoint.
+@app.route('/diamondEarring')
+def diamondEarring():
+    return render_template('diamondEarring.html')
 
-    args:
-        - None
-
-    returns:
-        - None
-    """
-    return render_template('FAQ.html')
+@app.route('/cubanChain')
+def cubanChain():
+    return render_template('cubanChain.html')
 
 @app.route('/login')
 def login_page():
