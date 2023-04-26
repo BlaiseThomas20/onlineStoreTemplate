@@ -149,3 +149,28 @@
     text-align: center;
 
 }
+.product-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}

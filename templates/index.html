@@ -5,6 +5,7 @@
     <div class="col-md-12" id="index_buttons">
         <a href="/login" class="btn btn-primary" id="login_button">Login</a>
         <a href="/register" class="btn btn-primary" id="register_button">Register</a>
+        <a href="/FAQ" class="btn btn-primary" id="register_button">FAQ</a>
     </div>
 </div>
 
@@ -19,11 +20,17 @@
                         {% for product in products %}
                         <div class="col-md-4">
                             <div class="product_card" id="product_card">
-                                <img src="{{ product.image_url }}" class="product_card-img" alt="...">
+                                <a href="{{ product.register }}" target="_blank">
+                                    <img src="{{ product.image_url }}" class="product_card-img" alt="..." style="display: block; width: 300px; height: 300px;">
+                                </a>
                                 <div class="product_card-body">
-                                    <h5 class="product_card-title">{{ product.item_name }}</h5>
+                                    <h5 class="product_card-title">
+                                        <a href="{{ product.product_link }}" target="_blank">{{ product.item_name }}</a>
+                                    </h5>
                                     <div class="overlay">
-                                        <p class="product_card-text">{{ product.info }}</p>
+                                        <p class="product_card-text">
+                                            <a href="/cubanChain" target="_blank">{{ product.info }}</a> <!-- Add hyperlink to cubanChain.html -->
+                                        </p>
                                     </div>
                                     <p class="product_card-price">${{ product.price }}</p>
                                 </div>
@@ -35,4 +42,4 @@
             </form>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}

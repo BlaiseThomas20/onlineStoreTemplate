@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12" id="index_buttons">
+        <a href="/login" class="btn btn-primary" id="login_button">Login</a>
+        <a href="/register" class="btn btn-primary" id="register_button">Register</a>
+    </div>
+</div>
+<head>
+    <title>Cuban Chain</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cubanChain.css') }}">
+</head>
+<body>
+    <div class="product-container">
+        <h1>{{ product['name'] }}</h1>
+        <img src="{{ url_for('static', filename=cubanChain['image']) }}" alt="Cuban Chain">
+        <p class="description">{{ product['description'] }}</p>
+        <p class="price">{{ product['price'] }}</p>
+    </div>
+</body>
+{% endblock %}

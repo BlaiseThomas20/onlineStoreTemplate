@@ -28,9 +28,48 @@ def index_page():
     """
     return render_template('index.html', username=username, products=products, sessions=sessions)
 
-@app.route('/')
-def index_page2():
-    return render_template('indexItem.html')
+@app.route('/cubanChain')
+def cubanChain():
+    cubanChain = {
+        'name': 'Cuban Chain',
+        'description': 'A stylish chain with tightly interlocking links, made of high-quality materials.',
+        'price': '$12000.00',
+        'image': 'cuban_chain.jpeg'
+    }
+    return render_template('cubanChain.html', cubanChain=cubanChain)
+
+@app.route('/diamondEarring')
+def home():
+    diamondEarrings = {
+        'name': 'Diamond Stud Earrings',
+        'description': 'Elagant Earrings featuring dazzling diamonds that catch the light beautifully',
+        'price': '$599.99',
+        'image': 'diamond_ring.jpeg'
+    }
+    return render_template('diamondEarring.html', diamondEarrings=diamondEarrings)
+
+@app.route('/diamondRing')
+def diamondRing():
+    diamondRing = {
+        'name': 'Diamond Ring',
+        'description': 'A luxurious ring with a diamond as the centerpiece.',
+        'price': '$6000.00',
+        'image': 'diamond_ring.jpeg'
+    }
+    return render_template('diamondRing.html', diamondRing=diamondRing)
+
+@app.route('/FAQ')
+def FAQ():
+    """
+    Renders the login page when the user is at the `/login` endpoint.
+
+    args:
+        - None
+
+    returns:
+        - None
+    """
+    return render_template('FAQ.html')
 
 @app.route('/login')
 def login_page():
