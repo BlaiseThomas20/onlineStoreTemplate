@@ -8,32 +8,28 @@
     </div>
 </div>
 
-<div class="row" id="products_page">
+<div class="row" id="faq">
     <div class="col-md-12">
-        <h3>Products</h3>
+        <h3>Frequently Asked Questions</h3>
         <hr>
-        <div class="row">
-            <form action="/checkout" method="post">
-                <div class="form-group">
-                    <div class="row">
-                        {% for product in products %}
-                        <div class="col-md-4">
-                            <div class="product_card" id="product_card">
-                                <img src="{{ product.image_url }}" class="product_card-img" alt="...">
-                                <div class="product_card-body">
-                                    <h5 class="product_card-title">{{ product.item_name }}</h5>
-                                    <div class="overlay"> <!-- overlay class for the hover feature -->
-                                        <p class="product_card-text">{{ product.info }}</p>
-                                    </div>
-                                    <p class="product_card-price">${{ product.price }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </form>
-        </div>
+        <ul>
+            <li>
+                <strong>What is this website?</strong>
+                <p>This is The Jewel Box, A website selling exclusive Diamond Jewelry</p>
+            </li>
+            <li>
+                <strong>How do I access the products?</strong>
+                <p>First you must register by clicking on the "Register" button and providing your personal information.</p>
+            </li>
+            <li>
+                <strong>I've registered but I dont see any products</strong>
+                <p>You can login by clicking on the "Login" button and providing your credentials.</p>
+            </li>
+            <li>
+                <strong>What products do you sell?</strong>
+                <p>We sell exclusive Diamond Rings, Cuban Chains, and Diamond Earrings</p>
+            </li>
+        </ul>
     </div>
 </div>
 {% endblock %}

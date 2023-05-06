@@ -28,9 +28,51 @@ def index_page():
     """
     return render_template('index.html', username=username, products=products, sessions=sessions)
 
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+"""Renders The products"""
+products = [
+    {
+        "id": 1,
+        "item_name": "Diamond Ring",
+        "info": "A beautiful diamond ring, perfect for engagements and weddings.",
+        "price": 5000.00,
+        "image_url": "static/images/diamond_ring.jpeg"
+    },
+    {
+        "id": 2,
+        "item_name": "Diamond Earring",
+        "info": "Stunning diamond earrings that will catch everyone's attention.",
+        "price": 8000.00,
+        "image_url": "static/images/diamond_earring.jpeg"
+    },
+    {
+        "id": 3,
+        "item_name": "Cuban Link Chain",
+        "info": "A stylish chain with tightly interlocking links, made of high-quality materials.",
+        "price": 12000.00,
+        "image_url": "static/images/cuban_chain.jpeg"
+    }
+]
+
+"""Define your routes"""
 @app.route('/')
-def index_page2():
-    return render_template('indexItem.html')
+def index():
+    return render_template('index.html', products=products)
+
+@app.route('/diamondRing')
+def diamondRing():
+    return render_template('diamondRing.html')
+
+@app.route('/diamondEarring')
+def diamondEarring():
+    return render_template('diamondEarring.html')
+
+@app.route('/cubanChain')
+def cubanChain():
+    return render_template('cubanChain.html')
 
 @app.route('/login')
 def login_page():
