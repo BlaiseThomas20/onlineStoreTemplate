@@ -1,0 +1,5 @@
+I checked and validated "home.html," which had a few warnings and errors from W3 Schools (validator.w3.org). Refer to "homeValidation.png" in this same folder.
+Basically, the validator wanted us to add the language (<html lang="en">), recommended using our own character encoding, and saw that we used an unnecessary type attribute.
+With the language attribute and character encoding, these are not within the scope of the home file.
+For the unnecessary type attribute, I deleted it in the home file.
+Other than these, the rest of the errors involved functional SQL that didn't needed to be changed.
