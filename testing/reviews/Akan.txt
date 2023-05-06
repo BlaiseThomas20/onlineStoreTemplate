@@ -1,0 +1,4 @@
+I encountered a problem where ID was used in the .html file which is not suitable for multiple element instances.
+I fixed this error by changing the attribute from ID to class so it can be used across multiple element instances.
+
+There was a problem with the language attribute in the character coding and that is not within the scope of our individual files.

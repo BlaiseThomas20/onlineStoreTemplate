@@ -55,6 +55,7 @@
     display:block;
 }
 
+/*Styling and positioning the logout button.*/
 #logout_button{
     background-color: #ef0c0c;
     border-color: #ccc;
@@ -102,7 +103,7 @@
     margin-bottom: 10px;
 }
 
-#info_form_group {
+.info_form_group {
     margin-top: 10px;
     width: 200px;
 }
