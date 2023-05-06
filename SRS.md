@@ -7,12 +7,10 @@ Fill the document out following the guidelines listed in each section. Maintain 
 
 ## Group Members
 
-
 * [Sreyas Kodukulla](mailto:skodukul.edu)
 * [Akanimoh Joseph Umoren](mailto:aumoren@uncc.edu)
 * [Blaise Thomas](mailto:bthom108@uncc.edu)
 * [Mercere Baker](mailto:mbaker89@uncc.edu)
-
 
 ## Revisions
 
@@ -32,7 +30,6 @@ When a change is made to the document, a new revision should be created. The rev
 6. [Glossary](#glossary)
 
 ## Introduction
-
 
 The idea for our project is to create a hands on jewlery store. We will build a system that has features to be able to search for jewlery based on the type and the material. The software system will allow users to perform filtered searches, create a wishlist or shopping cart for any items, and it will also display every item and give a brief description of it. Our stakeholders are the individual customers that are interested in buying products from our store. Their needs are the products we offer and we will give them the ability to browse through to find the right item to fit their needs.
 the filter search is when a user can input certain things that they are looking for and not looking for (based on price, material, type) and will find items that match the conditions they have set in the search.
@@ -282,7 +279,6 @@ In this section, you should list use cases for the project. Use cases are a thor
   * **Preconditions:** The customer can connect to the website, the shopping cart is functional, the customer has put items in the shopping cart.
   * **Postconditions:** The customer's shopping cart no longer has the item in the shopping cart. If the shopping cart only has that item, it should be empty and unable to proceed to checkout.
   
-
 ## User Stories
 
 In this section, you should list user stories for the project. User stories are a short description of how a user will be interacting with the system. Each group member must supply at least two user stories. Each user story should be written in the following format:
@@ -343,4 +339,3 @@ In this section, you should list user stories for the project. User stories are 
 
 * **Term:** Navigation bar
   * **Definition:** The webpage element that helps users navigate through the use of hyperlinks.
-
