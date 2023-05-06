@@ -55,6 +55,7 @@
     display:block;
 }
 
+/*Styling and positioning the logout button.*/
 #logout_button{
     background-color: #ef0c0c;
     border-color: #ccc;
