@@ -1,0 +1,6 @@
+Using an HTML validation website, I was able to test the index.html file. 
+The results of this showed errors on SQL parts and other things that were a part of the template code. 
+Besides that, the part that I coded into the HTML file, which was the css class for opacity, came out with no errors.
+
+I fixed the 7th error from the validation by adding a closing tag for the div element on line 11 of index.html.
+

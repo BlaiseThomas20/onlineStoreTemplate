@@ -81,6 +81,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* Overlay class for hover feature */
 .overlay {
     position: absolute;
     top: 0;
