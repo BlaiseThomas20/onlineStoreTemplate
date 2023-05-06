@@ -45,27 +45,24 @@
 <!--Implementing a function which prompts the user to confirm they want to complete the purchase when they click on the "Order" button.
     A feature that makes sure the user has selected at least one item before they can proceed with ordering has been implemented as well.-->
 <script type="text/javascript">
-    var response;
+    var RESPONSE;
     function clicked() {
-      const response = confirm("Do you confirm your order?");
-      if (response){
+      RESPONSE = confirm("Do you confirm your order?");
+      if (RESPONSE){
         yourformelement.submit();
         return true;
       }
-      else {
-        alert("Cancelled.")
-        return false;
-      }
     }
 
-    function validateForm() {
+    function validateform() {
         var inputs = document.getElementsByClassName("quantity");
         for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].value > 0 && response==true) {
+
+            if (inputs[i].value > 0 && RESPONSE == true) {
                 return true;
             }
         }
-        alert("Cancelled.");
+        alert("Cancelled");
         return false;
         }
 </script>
